@@ -1,10 +1,10 @@
 # Petz - Seu pet center de estimação
 Teste prático para desenvolvedor front-end
 
-## Production
-Compila o projeto para ambiente de produção
-```$ yarn build```
-
 ## Development
-Inicia o webserver em 127.0.0.1 na porta 8080
-```$ yarn start```
+Inicia o webserver para ambienten de desenvolvimento em http://127.0.0.1:8080
+```$ yarn dev```
+
+## Production
+Compila o projeto para ambiente de produção em https://petz.netlify.com
+```$ yarn build && yarn start```
