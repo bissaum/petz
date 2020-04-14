@@ -1,4 +1,5 @@
 .DS_Store
+.next
 __MACOSX
 node_modules
-dist
+out
