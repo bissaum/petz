@@ -1,0 +1,28 @@
+{
+  "name": "petz",
+  "version": "1.0.0",
+  "description": "Seu pet center de estimação",
+  "main": "index.js",
+  "repository": "https://github.com/bissaum/petz.git",
+  "author": "Bissaum <bissaum@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn && webpack-dev-server --open --mode development",
+    "build": "yarn && webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
