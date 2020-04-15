@@ -39,7 +39,7 @@ const Detail = (props) => {
 
 Detail.getInitialProps = async function(context) {
   let { id } = context.query
-  const posts = await fetch('https://jsonplaceholder.typicode.com/posts/'+id)
+  const posts = await fetch('https://jsonplaceholder.typicode.com/posts/'+(id?id:1))
   const post = await posts.json()
 
   post.image = 'http://placeimg.com/150/150/animals'
