@@ -2,9 +2,13 @@
 Teste prático para desenvolvedor front-end
 
 ## Development
-Inicia o webserver para ambienten de desenvolvimento em http://127.0.0.1:8080
+Inicia o hotloader para desenvolvimento em http://127.0.0.1:8080
 ```$ yarn dev```
 
-## Production
-Compila o projeto para ambiente de produção em https://petz.netlify.com
-```$ yarn build && yarn start```
+## Unit test
+Executa a cobertura de testes unitários
+```$ yarn test```
+
+## Deploy
+Realiza o deploy para produção em https://petz.netlify.com
+```$ yarn deploy```

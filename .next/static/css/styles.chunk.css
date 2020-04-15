@@ -1,6 +1,232 @@
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: local("Ubuntu Regular");
+  src: url("/static/fonts/ubuntu-regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ubuntu-medium';
+  src: local("Ubuntu Medium");
+  src: url("/static/fonts/ubuntu-medium.ttf") format("truetype"); }
+
+@keyframes showDetail {
+  0% {
+    opacity: .5;
+    transform: translateY(600px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes backDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.detail {
+  position: relative;
+  margin-top: 30vh;
+  height: 85vh;
+  padding-bottom: 10px;
+  background: #00A0E4;
+  animation: backDrop .6s ease; }
+  .detail section {
+    display: block;
+    position: absolute;
+    top: -15vh;
+    left: 50%;
+    margin-left: -45%;
+    margin-bottom: 25px;
+    width: 90vw;
+    min-height: 460px;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    animation: showDetail .4s ease; }
+    .detail section > img {
+      position: absolute;
+      top: -75px;
+      left: 50%;
+      margin-left: -75px;
+      border-radius: 150px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+    .detail section h1 {
+      margin-top: 75px;
+      font: 1em 'ubuntu-medium', sans-serif;
+      color: #00A0E4;
+      text-transform: uppercase;
+      text-align: center; }
+    .detail section p {
+      font: .9em 'ubuntu-regular', sans-serif;
+      color: #262626; }
+      .detail section p::first-letter {
+        text-transform: uppercase; }
+    .detail section dl {
+      margin-top: 30px; }
+      .detail section dl dt {
+        float: left;
+        margin-right: 15px; }
+        .detail section dl dt img {
+          width: 64px;
+          height: 64px;
+          border-radius: 64px;
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+      .detail section dl dd {
+        font: .9em 'ubuntu-regular', sans-serif;
+        color: #262626; }
+        .detail section dl dd small {
+          display: block;
+          font: .8em 'ubuntu-regular', sans-serif;
+          text-transform: uppercase;
+          color: #6E6E6E; }
+        .detail section dl dd b {
+          font: 1em 'ubuntu-medium', sans-serif;
+          color: #00A0E4;
+          text-transform: uppercase; }
+        .detail section dl dd address {
+          display: block;
+          margin-top: 5px;
+          font: .9em 'ubuntu-regular', sans-serif;
+          text-transform: lowercase;
+          color: #262626; }
+
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: local("Ubuntu Regular");
+  src: url("/static/fonts/ubuntu-regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ubuntu-medium';
+  src: local("Ubuntu Medium");
+  src: url("/static/fonts/ubuntu-medium.ttf") format("truetype"); }
+
+@keyframes showList {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.list li:nth-child(1) {
+  animation: showList 0.3s ease; }
+
+.list li:nth-child(2) {
+  animation: showList 0.6s ease; }
+
+.list li:nth-child(3) {
+  animation: showList 0.9s ease; }
+
+.list li:nth-child(4) {
+  animation: showList 1.2s ease; }
+
+.list li:nth-child(5) {
+  animation: showList 1.5s ease; }
+
+.list li:nth-child(6) {
+  animation: showList 1.8s ease; }
+
+.list li:nth-child(7) {
+  animation: showList 2.1s ease; }
+
+.list li:nth-child(8) {
+  animation: showList 2.4s ease; }
+
+.list li:nth-child(9) {
+  animation: showList 2.7s ease; }
+
+.list li:nth-child(10) {
+  animation: showList 3s ease; }
+
+.list {
+  padding: 5px 0;
+  background: #00A0E4; }
+  .list li {
+    list-style: none; }
+    .list li a {
+      display: block;
+      position: relative;
+      min-height: 100px;
+      margin: 20px;
+      list-style: none;
+      background: #FFF;
+      padding: 20px 20px 20px 140px;
+      border-radius: 10px;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: all .2s ease; }
+      .list li a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); }
+      .list li a:active {
+        transform: translateY(0);
+        box-shadow: none; }
+      .list li a h1 {
+        font: 1em 'ubuntu-medium', sans-serif;
+        color: #00A0E4;
+        text-transform: uppercase; }
+      .list li a p {
+        font: .9em 'ubuntu-regular', sans-serif;
+        color: #262626; }
+        .list li a p::first-letter {
+          text-transform: uppercase; }
+      .list li a img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px; }
+
+@media screen and (min-width: 1024px) {
+  .list {
+    padding: 5px 20px; }
+    .list li a {
+      min-height: 150px;
+      max-width: 1280px;
+      margin: 20px auto;
+      padding: 20px 20px 20px 190px; }
+      .list li a h1 {
+        font: 1.25em 'ubuntu-medium', sans-serif; }
+      .list li a p {
+        font: 1.15em 'ubuntu-regular', sans-serif; }
+      .list li a img {
+        width: 150px;
+        height: 150px;
+        border-radius: 150px; } }
+
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: local("Ubuntu Regular");
+  src: url("/static/fonts/ubuntu-regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ubuntu-medium';
+  src: local("Ubuntu Medium");
+  src: url("/static/fonts/ubuntu-medium.ttf") format("truetype"); }
+
 body {
   margin: 0;
   background: #FFD400; }
+
+header {
+  padding: 20px 20px 0; }
+  header h1 {
+    width: 100px;
+    height: 56px;
+    margin: 0 auto;
+    background: url("/static/images/logo-petz-small.png") no-repeat;
+    background-size: 100px;
+    text-indent: -9000px; }
+    @media screen and (min-width: 1024px) {
+      header h1 {
+        width: 150px;
+        height: 105px;
+        background: url("/static/images/logo-petz-large.png") no-repeat;
+        background-size: 150px; } }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

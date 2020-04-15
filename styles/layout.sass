@@ -1,6 +1,22 @@
+@import _guideline
+
 body
   margin: 0
-  background: #FFD400
+  background: $secondary-color
 
-.layout
-  .header
+header
+  padding: 20px 20px 0
+
+  h1
+    width: 100px
+    height: 56px
+    margin: 0 auto
+    background: url($petz-small) no-repeat
+    background-size: 100px
+    text-indent: -9000px
+
+    @media screen and (min-width: $mobile-first)
+      width: 150px
+      height: 105px
+      background: url($petz-large) no-repeat
+      background-size: 150px

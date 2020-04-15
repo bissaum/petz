@@ -1,39 +1,41 @@
 import React from 'react'
+import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
+import '../styles/list.sass'
 import Layout from '../components/layout'
-
-const DetailLink = props => (
-  <Link href="/detail/[id]" as={`/detail/${props.id}`}>
-    <a>{props.id}</a>
-  </Link>
-)
 
 const Index = (props) => (
   <Layout>
-    <h1>Batman TV Showssssss</h1>
-    <ul>
-      {props.shows.map(show => (
-        <li key={show.id}>
-          <Link href="/p/[id]" as={`/p/${show.id}`}>
-            <a>{show.title}</a>
+    <Head>
+      <title>Petz - Adote um pet</title>
+    </Head>
+    <ol className="list">
+      {props.post.map(card => (
+        <li key={card.id}>
+          <Link href="/detail/[id]" as={`/detail/${card.id}`}>
+            <a>
+              <img src={card.image} />
+              <h1>{card.title}</h1>
+              <p>{card.body}</p>
+            </a>
           </Link>
         </li>
       ))}
-    </ul>
+    </ol>
   </Layout>
 )
 
+Index.defaultProps = { post: [] }
+
 Index.getInitialProps = async function() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const data = await res.json()
+  const posts = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const post = await posts.json()
 
-  console.log(`Show data fetched. Count: ${data.length}`)
+  post.map((a,i) => a.image = 'http://placeimg.com/150/150/animals?i='+i)
 
-  return {
-    shows: data
-  }
+  return { post }
 }
 
 export default Index

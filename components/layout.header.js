@@ -2,15 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 
 const Header = () => (
-  <div>
-    <img src="" alt="Petz" />
+  <header>
     <Link href="/">
-      <a>Index</a>
+      <a>
+        <h1>Petz - Seu pet center de estimação</h1>
+      </a>
     </Link>
-    <Link href="/detail">
-      <a>Detail</a>
-    </Link>
-  </div>
+  </header>
 )
 
 export default Header
