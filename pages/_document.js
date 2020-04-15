@@ -16,6 +16,9 @@ class MyDocument extends Document {
           <link rel="icon" href="../static/favicon.ico" />
         </Head>
         <body>
+          <noscript>
+            Necessário habilitar o JavaScript para executar este aplicativo.
+          </noscript>
           <Main />
           <NextScript />
         </body>

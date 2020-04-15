@@ -1,5 +1,5 @@
 .DS_Store
-.next
-__MACOSX
-node_modules
-out
+.next/
+__MACOSX/
+node_modules/
+out/

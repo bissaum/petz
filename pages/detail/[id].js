@@ -12,6 +12,9 @@ const Detail = (props) => {
       <Head>
         <title>Petz - Adote este pet</title>
       </Head>
+      <a href="/" className="icon-left">
+        <i className="gg-chevron-left"></i>
+      </a>
       <div className="detail">
         <section>
           <img src={props.post.image} />
@@ -42,15 +45,13 @@ Detail.getInitialProps = async function(context) {
   const posts = await fetch('https://jsonplaceholder.typicode.com/posts/'+(id?id:1))
   const post = await posts.json()
 
-  post.image = 'http://placeimg.com/150/150/animals'
+  post.image = 'https://placeimg.com/150/150/animals'
 
   const users = await fetch('https://jsonplaceholder.typicode.com/users/'+post.userId)
   const user = await users.json()
 
-  user.image = 'http://placeimg.com/150/150/people'
+  user.image = 'https://placeimg.com/150/150/people'
   user.gender = Math.round(Math.random()) ? 'male' : 'female'
-
-  console.log(user)
 
   return { post, user }
 }

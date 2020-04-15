@@ -21,3 +21,52 @@ $primary-color: #00A0E4
 $secondary-color: #FFD400
 $text-color: #262626
 $text-muted: #6E6E6E
+
+// Icons (https://css.gg)
+.gg-chevron-left
+  box-sizing: border-box
+  position: relative
+  display: block
+  transform: scale(var(--ggs,1))
+  width: 22px
+  height: 22px
+  border: 2px solid transparent
+  border-radius: 100px
+
+  &::after
+    content: ""
+    display: block
+    box-sizing: border-box
+    position: absolute
+    width: 10px
+    height: 10px
+    border-bottom: 2px solid
+    border-left: 2px solid
+    transform: rotate(45deg)
+    left: 6px
+    top: 4px
+
+.gg-search
+  box-sizing: border-box
+  position: relative
+  display: block
+  transform: scale(var(--ggs,1))
+  width: 16px
+  height: 16px
+  border: 2px solid
+  border-radius: 100%
+  margin-left: -4px
+  margin-top: -4px
+
+  &::after
+    content: ""
+    display: block
+    box-sizing: border-box
+    position: absolute
+    border-radius: 3px
+    width: 2px
+    height: 8px
+    background: currentColor
+    transform: rotate(-45deg)
+    top: 10px
+    left: 12px
